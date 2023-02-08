@@ -171,7 +171,7 @@ def analysis():
     axtspt.set_yticks(yticks)
     axtspt.set_aspect('equal')       
 
-    ### B. statistics of the eigenvalue and entries in the rank-one vectors
+    ### B. statistics of the eigenvalue and entries on the rank-one vectors
     ng    = len(gaverageseries)
     ige   = ng
     sjump = 2
@@ -290,7 +290,7 @@ def analysis():
 
     ### C. loading patterns of eigenvectors
     idxtrial=9#16#
-    idxeta=9#4# # 9 FOR COMPARE
+    idxeta=9#4# # 9 FOR COMPARISON
     alphaval=0.25
     edgv='black'
     cm='br'
@@ -312,7 +312,7 @@ def analysis():
         idxwhere = np.where(np.abs(varmE)>scale_std*stdmEtotal)
         mEvec[idxwhere]=meanmEtotal
         meanmE[irank]=np.mean(mEvec)
-        # puring I
+        # pruning I
         meanmItotal,stdmItotal = np.mean(mIvec),np.std(mIvec)
         varmI = mIvec - meanmItotal
         idxwhere = np.where(np.abs(varmI)>scale_std*stdmItotal)
@@ -320,14 +320,14 @@ def analysis():
         meanmI[irank]=np.mean(mIvec)
         
         # n vector
-        # puring E
+        # pruning E
         meannEtotal,stdnEtotal = np.mean(nEvec),np.std(nEvec)
         varnE = nEvec - meannEtotal
         idxwhere = np.where(np.abs(varnE)>scale_std*stdnEtotal)
         nEvec[idxwhere]=meannEtotal
         meannE[irank]=np.mean(nEvec)
 
-        # puring I
+        # pruning I
         meannItotal,stdnItotal = np.mean(nIvec),np.std(nIvec)
         varnI = nIvec - meannItotal
         idxwhere = np.where(np.abs(varnI)>scale_std*stdnItotal)
@@ -415,7 +415,7 @@ def analysis():
     axm.set_xlim(ylims)
 
 
-    ### C.  COMPARE EACH ENTRY ON THE EIGENVECTORS (RECONSTRUCT V.S. EIGENDECOMPOSITION)
+    ### C.  COMPARE INDIVIDUAL ENTRIES ON THE EIGENVECTORS (RECONSTRUCT V.S. EIGENDECOMPOSITION)
     xtickms = np.linspace(-2.5,5.5,2)
     xlimms = [-2.5,5.5]
     ytickms = np.linspace(-2.5,5.5,2)
