@@ -583,7 +583,7 @@ def analysis():
         idxwhere = np.where(np.abs(varmE)>scale_std*stdmEtotal)
         mEvec[idxwhere]=meanmEtotal
         meanmE[irank]=np.mean(mEvec)
-        # puring I
+        # pruning I
         meanmItotal,stdmItotal = np.mean(mIvec),np.std(mIvec)
         varmI = mIvec - meanmItotal
         idxwhere = np.where(np.abs(varmI)>scale_std*stdmItotal)
@@ -591,14 +591,14 @@ def analysis():
         meanmI[irank]=np.mean(mIvec)
         
         # n vector
-        # puring E
+        # pruning E
         meannEtotal,stdnEtotal = np.mean(nEvec),np.std(nEvec)
         varnE = nEvec - meannEtotal
         idxwhere = np.where(np.abs(varnE)>scale_std*stdnEtotal)
         nEvec[idxwhere]=meannEtotal
         meannE[irank]=np.mean(nEvec)
 
-        # puring I
+        # pruning I
         meannItotal,stdnItotal = np.mean(nIvec),np.std(nIvec)
         varnI = nIvec - meannItotal
         idxwhere = np.where(np.abs(varnI)>scale_std*stdnItotal)
